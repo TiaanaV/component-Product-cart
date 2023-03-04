@@ -1,27 +1,27 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap"); */
-
 * {
   font-family: "Montserrat", sans-serif, "Fraunces", serif;
   font-weight: 500px;
   font-size: 14px;
   color: var(--dark-grayish-blue);
-  background-color: var(--white);
+  box-sizing: content-box;
 }
 
 body {
-  padding-top: 10px;
-  padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 300px;
   background: var(--cream);
 }
 
 .card {
+  background-color: var(--white);
   margin: 0 auto;
   display: flex;
   flex-direction: row;
   justify-content: center;
   border-radius: 10px;
   margin-top: 100px;
-  margin-bottom: 300px;
+  /* margin-bottom: 300px; */
   width: 600px;
   height: 450px;
 }
@@ -29,21 +29,30 @@ body {
 /* .product-img-wrap {
   float: left;
   position: relative;
+  width: 300px;
+  height: 300px;
 } */
 
 .product-photo-img {
   border-radius: 10px 0 0 10px;
-  width: 400px;
-
-  /* темнее фон  */
+  width: 300px;
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url(images/image-product-desktop.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* темнее фон сделать  */
 }
+
 .product-info {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-
   width: 240px;
-  padding: 35px 30px;
+  padding: 35px 32px;
   border-radius: 20px;
 }
 
@@ -60,16 +69,14 @@ body {
   font-size: 32px;
   line-height: 32px;
   color: var(--very-dark-blue);
-  /* padding-right: 10px; */
-  margin-bottom: 23px;
+  margin-bottom: 26px;
 }
 
 .product-description {
   font-family: "Montserrat", sans-serif;
-  /* padding-right: 10px; */
   font-size: 14px;
   line-height: 23px;
-  margin-bottom: 30px;
+  margin-bottom: 29px;
 }
 
 .product-price {
@@ -77,15 +84,14 @@ body {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  margin-bottom: 25px;
-  padding-right: 10px;
+  margin-bottom: 30px;
 }
 
 .price-with-discount {
   font-family: "Fraunces", serif;
   font-size: 32px;
   color: var(--dark-cyan);
-  margin-right: 15px;
+  margin-right: 21px;
 }
 
 .price-without-discount {
@@ -97,22 +103,22 @@ body {
 
 .button-add-to-cart {
   font-family: "Fraunces", serif;
-  font-weight: bolder;
+  font-weight: 700;
   border: none;
   font: inherit;
   color: inherit;
+  display: flex;
   text-align: center;
-  width: 250px;
-  text-align: center;
+  justify-content: center;
   padding: 15px;
-  border-radius: 10px;
+  border-radius: 7px;
   color: var(--white);
   background-color: var(--dark-cyan);
 }
 
 .button-icon-cart {
   background-color: var(--dark-cyan);
-  margin-right: 0.5ch;
+  margin-right: 10px;
 }
 
 .button-text {
